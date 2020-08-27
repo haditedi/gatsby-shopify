@@ -61,9 +61,14 @@ const ContextProvider = ({ children }) => {
     }
 
     initializeCheckout()
-  }, [store.client.checkout])
-  
-  useEffect(() => () => { isRemoved = true; }, [])
+  }, [store.client.checkout, isRemoved])
+
+  useEffect(
+    () => () => {
+      isRemoved = true
+    },
+    []
+  )
 
   return (
     <Context.Provider

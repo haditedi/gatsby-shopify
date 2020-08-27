@@ -1,16 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import SEO from '~/components/seo'
 import ProductGrid from '~/components/ProductGrid'
+import HeroImage from '~/components/heroimage'
 
 const IndexPage = () => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Shop powered by Gatsby and Shopify.</p>
+    <h1 style={{ textAlign: 'center' }}>Awesome Tank Tops Made For You</h1>
+
+    <HeroImage />
     <ProductGrid />
-    <Link to="/page-2/">Go to page 2</Link>
   </>
 )
 

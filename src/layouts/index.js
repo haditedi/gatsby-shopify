@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
                 {` `}
                 <a href="https://www.gatsbyjs.org">Gatsby</a>
               </footer>
-            </Wrapper>
+            </Wrapper> 
           </>
         )}
       />

@@ -35,7 +35,7 @@ const ProductForm = ({ product }) => {
         }
       })
     },
-    [client.product, productVariant.shopifyId, variants]
+    [client.product, productVariant.shopifyId]
   )
 
   useEffect(() => {

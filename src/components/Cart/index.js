@@ -7,6 +7,7 @@ const Cart = () => {
   const {
     store: { checkout },
   } = useContext(StoreContext)
+  console.log(checkout)
 
   const handleCheckout = () => {
     window.open(checkout.webUrl)
