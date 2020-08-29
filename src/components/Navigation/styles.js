@@ -12,9 +12,22 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 1.45rem;
+  padding: 1.45rem 1.45rem 0.5rem;
   margin: 0 auto;
+
   max-width: 960px;
+`
+
+export const Section = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 700px;
+  @media (max-width: ${breakpoints.s}px) {
+    align-self: flex-start;
+  }
 `
 
 export const MenuLink = styled(Link)`

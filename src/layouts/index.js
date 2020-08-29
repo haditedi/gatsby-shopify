@@ -10,8 +10,10 @@ import Navigation from '~/components/Navigation'
 
 const Wrapper = styled.div`
   margin: 0 auto;
+  width: 100%;
   max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
+  flex-grow: 1;
 `
 
 const Layout = ({ children }) => {
@@ -29,17 +31,26 @@ const Layout = ({ children }) => {
           }
         `}
         render={data => (
-          <>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              minHeight: '100vh',
+            }}
+          >
             <Navigation siteTitle={data.site.siteMetadata.title} />
-            <Wrapper>
-              {children}
-              <footer>
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
-              </footer>
-            </Wrapper> 
-          </>
+            <Wrapper>{children}</Wrapper>
+            <footer
+              style={{
+                alignSelf: 'baseline',
+                margin: '0 auto',
+                padding: '15px 15px 0',
+                textAlign: 'center',
+              }}
+            >
+              © {new Date().getFullYear()}, created by Hadi Tedi
+            </footer>
+          </div>
         )}
       />
     </ContextProvider>

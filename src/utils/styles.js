@@ -23,6 +23,16 @@ export const GlobalStyle = props => (
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
       }
+
+      a {
+        color: white;
+      }
+      a:hover {
+        color: blue;
+      }
+      .active {
+        color: black;
+      }
     `}
   />
 )

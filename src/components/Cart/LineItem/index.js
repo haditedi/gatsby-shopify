@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 
 import StoreContext from '~/context/StoreContext'
+import { Button } from 'antd'
 import { Wrapper } from './styles'
 
 const LineItem = props => {
@@ -13,9 +14,9 @@ const LineItem = props => {
 
   const variantImage = item.variant.image ? (
     <img
+      style={{ width: '100%', maxWidth: '200px', marginBottom: '20px' }}
       src={item.variant.image.src}
       alt={`${item.title} product shot`}
-      height="60px"
     />
   ) : null
 
@@ -33,7 +34,7 @@ const LineItem = props => {
     <Wrapper>
       {console.log(item)}
       <Link to={`/product/${item.variant.product.handle}/`}>
-        {variantImage}
+        <section>{variantImage}</section>
       </Link>
       <p>
         {item.title}
@@ -42,7 +43,9 @@ const LineItem = props => {
       </p>
       {selectedOptions}
       {item.quantity}
-      <button onClick={handleRemove}>Remove</button>
+      <Button style={{ margin: '10px' }} shape="round" onClick={handleRemove}>
+        Remove
+      </Button>
     </Wrapper>
   )
 }

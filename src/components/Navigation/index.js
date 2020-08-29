@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
 import { ShoppingCartOutlined } from '@ant-design/icons'
+import { Link } from 'gatsby'
 
 import StoreContext from '~/context/StoreContext'
-import { CartCounter, Container, MenuLink, Wrapper } from './styles'
+import { CartCounter, Container, MenuLink, Wrapper, Section } from './styles'
 
 const useQuantity = () => {
   const {
@@ -21,7 +22,26 @@ const Navigation = () => {
   return (
     <Wrapper>
       <Container>
-        <MenuLink to="/">YouTanks</MenuLink>
+        <Section>
+          <MenuLink to="/">YouTanks</MenuLink>
+
+          <Link
+            to="/about"
+            activeClassName="active"
+            style={{ margin: '5px 15px' }}
+          >
+            About
+          </Link>
+
+          <Link
+            to="/contact"
+            style={{ margin: '5px 0px' }}
+            activeClassName="active"
+          >
+            Contact Us
+          </Link>
+        </Section>
+
         <MenuLink to="/cart">
           {hasItems && <CartCounter>{quantity}</CartCounter>}
           <ShoppingCartOutlined

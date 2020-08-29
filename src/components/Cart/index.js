@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 import StoreContext from '~/context/StoreContext'
 import LineItem from './LineItem'
+import { Button } from 'antd'
 
 const Cart = () => {
   const {
@@ -20,21 +21,31 @@ const Cart = () => {
   return (
     <div>
       {lineItems}
-      <h2>Subtotal</h2>
-      <p>$ {checkout.subtotalPrice}</p>
-      <br />
-      <h2>Taxes</h2>
-      <p>$ {checkout.totalTax}</p>
-      <br />
-      <h2>Total</h2>
-      <p>$ {checkout.totalPrice}</p>
-      <br />
-      <button
-        onClick={handleCheckout}
-        disabled={checkout.lineItems.length === 0}
+      <section
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
+          flexWrap: 'wrap',
+        }}
       >
-        Check out
-      </button>
+        <h2>Subtotal</h2>
+        <p>£ {checkout.subtotalPrice}</p>
+        <br />
+        <h2>Taxes</h2>
+        <p>£ {checkout.totalTax}</p>
+        <br />
+        <h2>Total</h2>
+        <p>£ {checkout.totalPrice}</p>
+        <br />
+        <Button
+          shape="round"
+          onClick={handleCheckout}
+          disabled={checkout.lineItems.length === 0}
+        >
+          Check out
+        </Button>
+      </section>
     </div>
   )
 }
