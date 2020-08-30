@@ -14,6 +14,7 @@ export const Grid = styled.div`
 
 export const Product = styled.div`
   display: flex;
+  margin-top: 60px;
   min-height: 100%;
   flex-direction: column;
   border: 1px solid gray;

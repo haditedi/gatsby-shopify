@@ -1,8 +1,19 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const Heroimage = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: 'true',
+  }
   const data = useStaticQuery(graphql`
     query {
       positive: file(relativePath: { eq: "positivitytank.jpg" }) {
@@ -19,7 +30,7 @@ const Heroimage = () => {
           }
         }
       }
-      whitetank: file(relativePath: { eq: "whitetank2.jpg" }) {
+      whitetank: file(relativePath: { eq: "whitetank3.jpg" }) {
         child: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -29,7 +40,7 @@ const Heroimage = () => {
     }
   `)
   return (
-    <>
+    <Slider {...settings}>
       <div style={{ marginBottom: '30px' }}>
         <Img fluid={data.positive.child.fluid} alt="positive tank top" />
       </div>
@@ -43,7 +54,7 @@ const Heroimage = () => {
           alt="white tank top"
         />
       </div>
-    </>
+    </Slider>
   )
 }
 

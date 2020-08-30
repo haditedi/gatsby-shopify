@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
+import { Helmet } from 'react-helmet'
+import favicon from '~/images/logo.png'
 
 import ContextProvider from '~/provider/ContextProvider'
 
@@ -38,6 +40,9 @@ const Layout = ({ children }) => {
               minHeight: '100vh',
             }}
           >
+            <Helmet>
+              <link rel="icon" href={favicon} />
+            </Helmet>
             <Navigation siteTitle={data.site.siteMetadata.title} />
             <Wrapper>{children}</Wrapper>
             <footer

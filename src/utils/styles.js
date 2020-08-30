@@ -33,6 +33,10 @@ export const GlobalStyle = props => (
       .active {
         color: black;
       }
+
+      h1 {
+        line-height: 1.2;
+      }
     `}
   />
 )

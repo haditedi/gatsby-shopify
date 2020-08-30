@@ -6,7 +6,7 @@ import HeroImage from '~/components/heroimage'
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" />
     <h1 style={{ textAlign: 'center' }}>Awesome Tank Tops Made For You</h1>
 
     <HeroImage />

@@ -3,6 +3,7 @@ import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import { Link } from 'gatsby'
+import Logo from '~/images/logo.png'
 
 import StoreContext from '~/context/StoreContext'
 import { CartCounter, Container, MenuLink, Wrapper, Section } from './styles'
@@ -23,19 +24,26 @@ const Navigation = () => {
     <Wrapper>
       <Container>
         <Section>
-          <MenuLink to="/">YouTanks</MenuLink>
+          <MenuLink to="/">
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ width: '50px', margin: '5px 0px 18px 10px' }}
+            />{' '}
+            YouTanks
+          </MenuLink>
 
           <Link
             to="/about"
             activeClassName="active"
-            style={{ margin: '5px 15px' }}
+            style={{ margin: '5px 15px 15px' }}
           >
             About
           </Link>
 
           <Link
             to="/contact"
-            style={{ margin: '5px 0px' }}
+            style={{ margin: '5px 0px 15px' }}
             activeClassName="active"
           >
             Contact Us
