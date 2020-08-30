@@ -5,6 +5,8 @@ import StoreContext from '~/context/StoreContext'
 import { Button } from 'antd'
 import { Wrapper } from './styles'
 
+const paddRight = { paddingRight: '20px' }
+
 const LineItem = props => {
   const { item } = props
   const {
@@ -34,16 +36,21 @@ const LineItem = props => {
     <Wrapper>
       {console.log(item)}
       <Link to={`/product/${item.variant.product.handle}/`}>
-        <section>{variantImage}</section>
+        <section style={paddRight}>{variantImage}</section>
       </Link>
-      <p>
+      <p style={paddRight}>
         {item.title}
         {`  `}
         {item.variant.title === !'Default Title' ? item.variant.title : ''}
       </p>
-      {selectedOptions}
-      {item.quantity}
-      <Button style={{ margin: '10px' }} shape="round" onClick={handleRemove}>
+      <p style={paddRight}>{selectedOptions}</p>
+      <p style={paddRight}>Amount: {item.quantity}</p>
+
+      <Button
+        style={{ margin: '10px 0 37px' }}
+        shape="round"
+        onClick={handleRemove}
+      >
         Remove
       </Button>
     </Wrapper>

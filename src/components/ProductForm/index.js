@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useCallback } from 'react'
 import find from 'lodash/find'
 import isEqual from 'lodash/isEqual'
 import PropTypes from 'prop-types'
-
+import { Button } from 'antd'
 import StoreContext from '~/context/StoreContext'
 
 const ProductForm = ({ product }) => {
@@ -130,14 +130,14 @@ const ProductForm = ({ product }) => {
         value={quantity}
       />
       <br />
-      <button
-        type="submit"
+      <Button
+        shape="round"
         disabled={!available || adding}
         onClick={handleAddToCart}
       >
         Add to Cart
-      </button>
-      {!available && <p>This Product is out of Stock!</p>}
+      </Button>
+      {!available && <p>Sorry, this Product is out of Stock...</p>}
     </>
   )
 }

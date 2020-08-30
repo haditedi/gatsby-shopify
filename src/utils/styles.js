@@ -15,23 +15,25 @@ export const GlobalStyle = props => (
   <Global
     {...props}
     styles={css`
-      body {
-        margin: 0;
-      }
       html {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
       }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
       a {
-        color: white;
+        color: black;
       }
       a:hover {
         color: blue;
       }
       .active {
-        color: black;
+        color: white;
       }
 
       h1 {

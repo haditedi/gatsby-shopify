@@ -4,6 +4,8 @@ import StoreContext from '~/context/StoreContext'
 import LineItem from './LineItem'
 import { Button } from 'antd'
 
+const align = { padding: '5px 20px 0 0' }
+
 const Cart = () => {
   const {
     store: { checkout },
@@ -25,21 +27,23 @@ const Cart = () => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'flex-end',
+          alignItems: 'baseline',
           flexWrap: 'wrap',
         }}
       >
-        <h2>Subtotal</h2>
-        <p>£ {checkout.subtotalPrice}</p>
-        <br />
-        <h2>Taxes</h2>
-        <p>£ {checkout.totalTax}</p>
-        <br />
-        <h2>Total</h2>
-        <p>£ {checkout.totalPrice}</p>
-        <br />
+        <h2 style={align}>Subtotal</h2>
+        <p style={align}>£ {checkout.subtotalPrice}</p>
+
+        <h2 style={align}>Taxes</h2>
+        <p style={align}>£ {checkout.totalTax}</p>
+
+        <h2 style={align}>Total</h2>
+        <p style={align}>£ {checkout.totalPrice}</p>
+
         <Button
+          type="primary"
           shape="round"
+          style={{ marginBottom: '50px' }}
           onClick={handleCheckout}
           disabled={checkout.lineItems.length === 0}
         >

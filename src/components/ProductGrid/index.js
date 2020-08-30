@@ -68,9 +68,10 @@ const ProductGrid = () => {
                     alt={handle}
                   />
                 )}
+
+                <Title>{title}</Title>
+                <PriceTag>{getPrice(firstVariant.price)}</PriceTag>
               </Link>
-              <Title>{title}</Title>
-              <PriceTag>{getPrice(firstVariant.price)}</PriceTag>
             </Product>
           )
         )
