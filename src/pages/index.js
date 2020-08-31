@@ -7,7 +7,14 @@ import HeroImage from '~/components/heroimage'
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <h1 style={{ textAlign: 'center' }}>Awesome Tank Tops Made For You</h1>
+    <h1
+      data-sal="slide-up"
+      data-sal-duration="1000"
+      data-sal-easing="ease"
+      style={{ textAlign: 'center' }}
+    >
+      Awesome Tank Tops Made For You
+    </h1>
 
     <HeroImage />
     <ProductGrid />

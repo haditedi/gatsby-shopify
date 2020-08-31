@@ -38,6 +38,7 @@ export const MenuLink = styled(Link)`
 
   @media (max-width: ${breakpoints.s}px) {
     font-size: 1.4rem;
+    display: block;
   }
 `
 

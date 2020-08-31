@@ -21,6 +21,7 @@ const ProductForm = ({ product }) => {
 
   const productVariant =
     client.product.helpers.variantForOptions(product, variant) || variant
+
   const [available, setAvailable] = useState(productVariant.availableForSale)
 
   const checkAvailability = useCallback(
@@ -100,8 +101,11 @@ const ProductForm = ({ product }) => {
       <h3>{price}</h3>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
-          <label htmlFor={name}>{name} </label>
+          <label htmlFor={name} style={{ padding: '15px 40px 15px 0' }}>
+            {name}{' '}
+          </label>
           <select
+            style={{ margin: '12px 0', padding: '5px' }}
             name={name}
             key={id}
             onChange={event => handleOptionChange(index, event)}
@@ -124,6 +128,12 @@ const ProductForm = ({ product }) => {
         type="number"
         id="quantity"
         name="quantity"
+        style={{
+          margin: '12px 10px 30px',
+          padding: '3px',
+          width: '80px',
+          border: '1px solid black',
+        }}
         min="1"
         step="1"
         onChange={handleQuantityChange}
@@ -131,13 +141,14 @@ const ProductForm = ({ product }) => {
       />
       <br />
       <Button
+        type="primary"
         shape="round"
-        disabled={!available || adding}
+        // disabled={!available || adding}
         onClick={handleAddToCart}
       >
         Add to Cart
       </Button>
-      {!available && <p>Sorry, this Product is out of Stock...</p>}
+      {/* {!available && <p>Sorry, this Product is out of Stock...</p>} */}
     </>
   )
 }

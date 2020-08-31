@@ -49,11 +49,21 @@ const Layout = ({ children }) => {
               style={{
                 alignSelf: 'baseline',
                 margin: '0 auto',
-                padding: '15px 15px 0',
+                padding: '15px 15px',
                 textAlign: 'center',
+                background: '#e15f41',
+                width: '100%',
+                color: 'white',
               }}
             >
-              © {new Date().getFullYear()}, created by Hadi Tedi
+              © {new Date().getFullYear()}, created by{' '}
+              <a
+                href="https://www.tedi.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tedi Web Development
+              </a>
             </footer>
           </div>
         )}

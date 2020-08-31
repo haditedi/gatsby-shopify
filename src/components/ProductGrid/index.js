@@ -60,7 +60,12 @@ const ProductGrid = () => {
               variants: [firstVariant],
             },
           }) => (
-            <Product key={id}>
+            <Product
+              data-sal="slide-up"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
+              key={id}
+            >
               <Link to={`/product/${handle}/`}>
                 {firstImage && firstImage.localFile && (
                   <Img

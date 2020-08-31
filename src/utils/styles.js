@@ -15,8 +15,8 @@ export const GlobalStyle = props => (
   <Global
     {...props}
     styles={css`
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       html {
-        font-family: sans-serif;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
       }
@@ -27,6 +27,7 @@ export const GlobalStyle = props => (
       }
 
       a {
+        font-family: 'Roboto', sans-serif;
         color: black;
       }
       a:hover {
@@ -38,6 +39,11 @@ export const GlobalStyle = props => (
 
       h1 {
         line-height: 1.2;
+      }
+      @media (min-width: 600px) {
+        h1 {
+          font-size: 2.5rem;
+        }
       }
     `}
   />

@@ -28,7 +28,7 @@ const Navigation = () => {
             <img
               src={Logo}
               alt="logo"
-              style={{ width: '50px', margin: '5px 0px 18px 10px' }}
+              style={{ width: '50px', margin: '5px 0px 15px 10px' }}
             />{' '}
             YouTanks
           </MenuLink>
