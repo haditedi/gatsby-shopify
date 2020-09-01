@@ -9,8 +9,6 @@ const client = Client.buildClient({
 })
 
 const ContextProvider = ({ children }) => {
-  console.log(`${process.env.GASTBY_SHOPIFY_ACCESS_TOKEN}.TOKEN`)
-  console.log(`${process.env.GASTBY_SHOP_NAME}.myshopify.com`)
   let initialStoreState = {
     client,
     adding: false,
@@ -122,6 +120,10 @@ const ContextProvider = ({ children }) => {
                 return { ...prevState, checkout: res }
               })
             })
+        },
+        clearCheckOut: () => {
+          updateStore(initialStoreState)
+          localStorage.removeItem('shopify_checkout_id')
         },
       }}
     >

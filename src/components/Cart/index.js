@@ -9,11 +9,12 @@ const align = { padding: '5px 20px 0 0' }
 const Cart = () => {
   const {
     store: { checkout },
+    clearCheckOut,
   } = useContext(StoreContext)
-  console.log(checkout)
 
   const handleCheckout = () => {
     window.open(checkout.webUrl)
+    clearCheckOut()
   }
 
   const lineItems = checkout.lineItems.map(item => (

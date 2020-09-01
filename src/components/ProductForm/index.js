@@ -64,7 +64,12 @@ const ProductForm = ({ product }) => {
   }
 
   const handleAddToCart = () => {
-    message.success('Thank you, item added')
+    message.success({
+      content: 'Thank you, item added',
+      style: {
+        marginTop: '20vh',
+      },
+    })
     addVariantToCart(productVariant.shopifyId, quantity)
   }
 
