@@ -4,13 +4,13 @@ import Client from 'shopify-buy'
 import Context from '~/context/StoreContext'
 
 const client = Client.buildClient({
-  storefrontAccessToken: process.env.SHOPIFY_ACCESS_TOKEN,
-  domain: `${process.env.SHOP_NAME}.myshopify.com`,
+  storefrontAccessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
+  domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
 })
 
 const ContextProvider = ({ children }) => {
-  console.log(`${process.env.SHOPIFY_ACCESS_TOKEN}.TOKEN`)
-  console.log(`${process.env.SHOP_NAME}.myshopify.com`)
+  console.log(`${process.env.GASTBY_SHOPIFY_ACCESS_TOKEN}.TOKEN`)
+  console.log(`${process.env.GASTBY_SHOP_NAME}.myshopify.com`)
   let initialStoreState = {
     client,
     adding: false,
