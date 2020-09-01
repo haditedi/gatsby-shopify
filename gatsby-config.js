@@ -40,10 +40,10 @@ module.exports = {
     {
       resolve: `gatsby-source-shopify`,
       options: {
-        shopName: process.env.GASTBY_SHOP_NAME,
+        shopName: process.env.GATSBY_SHOP_NAME,
         // shopName: process.env.SHOP_NAME,
 
-        accessToken: process.env.GASTBY_SHOPIFY_ACCESS_TOKEN,
+        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
         // accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
 
         // Set verbose to true to display a verbose output on `npm run develop`
