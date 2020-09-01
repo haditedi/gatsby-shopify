@@ -1,7 +1,8 @@
 const path = require('path')
 
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
+  // path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
@@ -40,8 +41,10 @@ module.exports = {
       resolve: `gatsby-source-shopify`,
       options: {
         shopName: process.env.SHOP_NAME,
+        // shopName: process.env.SHOP_NAME,
 
         accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+        // accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
 
         // Set verbose to true to display a verbose output on `npm run develop`
         // or `npm run build`. This prints which nodes are being fetched and how
