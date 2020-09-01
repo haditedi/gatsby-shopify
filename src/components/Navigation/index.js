@@ -23,27 +23,39 @@ const Navigation = () => {
   return (
     <Wrapper>
       <Container>
-        <Section>
-          <MenuLink to="/">
-            <img
-              src={Logo}
-              alt="logo"
-              style={{ width: '50px', margin: '5px 0px 15px 10px' }}
-            />{' '}
+        <Link
+          to="/"
+          style={{
+            display: 'flex',
+            alignItems: 'baseline',
+          }}
+        >
+          <img
+            src={Logo}
+            alt="logo"
+            style={{ width: '70px', margin: '5px ' }}
+          />{' '}
+          <h1 style={{ color: 'white', margin: '0', paddingRight: '20px' }}>
             YouTanks
-          </MenuLink>
+          </h1>
+        </Link>
 
+        <Section>
           <Link
             to="/about"
             activeClassName="active"
-            style={{ margin: '5px 15px 15px' }}
+            style={{ margin: '5px 15px', fontWeight: 'bold' }}
           >
             About
           </Link>
 
           <Link
             to="/contact"
-            style={{ margin: '5px 0px 15px' }}
+            style={{
+              margin: '5px 0px',
+              fontWeight: 'bold',
+              paddingRight: '20px',
+            }}
             activeClassName="active"
           >
             Contact Us

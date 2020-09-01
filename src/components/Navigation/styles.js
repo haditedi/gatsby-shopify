@@ -14,20 +14,17 @@ export const Container = styled.div`
   align-items: baseline;
   padding: 1.45rem 1.45rem 0.5rem;
   margin: 0 auto;
-
+  flex-wrap: wrap;
   max-width: 960px;
+  @media (max-width: ${breakpoints.s}px) {
+    padding: 0.5rem;
+  }
 `
 
 export const Section = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 100%;
-  max-width: 700px;
-  @media (max-width: ${breakpoints.s}px) {
-    align-self: flex-start;
-  }
+
+  order: 2;
 `
 
 export const MenuLink = styled(Link)`

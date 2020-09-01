@@ -20,6 +20,9 @@ export const GlobalStyle = props => (
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
       }
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
       * {
         box-sizing: border-box;
         margin: 0;
@@ -40,9 +43,15 @@ export const GlobalStyle = props => (
       h1 {
         line-height: 1.2;
       }
+      p {
+        font-size: 1.2rem;
+      }
       @media (min-width: 600px) {
         h1 {
           font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.4rem;
         }
       }
     `}

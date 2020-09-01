@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useCallback } from 'react'
 import find from 'lodash/find'
 import isEqual from 'lodash/isEqual'
 import PropTypes from 'prop-types'
-import { Button } from 'antd'
+import { Button, message } from 'antd'
 import StoreContext from '~/context/StoreContext'
 
 const ProductForm = ({ product }) => {
@@ -64,6 +64,7 @@ const ProductForm = ({ product }) => {
   }
 
   const handleAddToCart = () => {
+    message.success('Thank you, item added')
     addVariantToCart(productVariant.shopifyId, quantity)
   }
 
