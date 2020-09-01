@@ -13,27 +13,28 @@ const Heroimage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: 'true',
+    arrows: false,
   }
   const data = useStaticQuery(graphql`
     query {
       positive: file(relativePath: { eq: "positivitytank.jpg" }) {
         child: childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       embroidery: file(relativePath: { eq: "embroiderytank.jpg" }) {
         child: childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       whitetank: file(relativePath: { eq: "whitetank3.jpg" }) {
         child: childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

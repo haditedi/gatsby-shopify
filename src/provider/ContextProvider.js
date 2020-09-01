@@ -9,6 +9,7 @@ const client = Client.buildClient({
 })
 
 const ContextProvider = ({ children }) => {
+  console.log(`${process.env.SHOP_NAME}.myshopify.com`)
   let initialStoreState = {
     client,
     adding: false,

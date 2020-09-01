@@ -39,17 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-source-shopify`,
       options: {
-        // The domain name of your Shopify shop. This is required.
-        // Example: 'gatsby-source-shopify-test-shop' if your Shopify address is
-        // 'gatsby-source-shopify-test-shop.myshopify.com'.
         shopName: process.env.SHOP_NAME,
 
-        // An API access token to your Shopify shop. This is required.
-        // You can generate an access token in the "Manage private apps" section
-        // of your shop's Apps settings. In the Storefront API section, be sure
-        // to select "Allow this app to access your storefront data using the
-        // Storefront API".
-        // See: https://help.shopify.com/api/custom-storefronts/storefront-api/getting-started#authentication
         accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
 
         // Set verbose to true to display a verbose output on `npm run develop`
@@ -65,16 +56,13 @@ module.exports = {
         '~': path.join(__dirname, 'src/'),
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-134421805-1',
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-134421805-1',
+    //     anonymize: true,
+    //     respectDNT: true,
+    //   },
+    // },
   ],
 }
