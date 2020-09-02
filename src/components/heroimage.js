@@ -41,7 +41,7 @@ const Heroimage = () => {
     }
   `)
   return (
-    <Slider {...settings}>
+    <Slider style={{ marginBottom: '50px' }} {...settings}>
       <div style={{ marginBottom: '30px' }}>
         <Img fluid={data.positive.child.fluid} alt="positive tank top" />
       </div>

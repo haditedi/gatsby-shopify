@@ -5,7 +5,7 @@ import { breakpoints } from '../../utils/styles'
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   @media (max-width: ${breakpoints.s}px) {
     grid-template-columns: repeat(1, 1fr);
@@ -14,7 +14,7 @@ export const Grid = styled.div`
 
 export const Product = styled.div`
   display: flex;
-  margin-top: 60px;
+  margin-top: 15px;
   min-height: 200px;
   max-height: 100%;
   flex-direction: column;

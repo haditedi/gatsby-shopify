@@ -23,7 +23,7 @@ const Contact = () => {
       <h1>Contact Us</h1>
 
       <form
-        style={{ width: '500px' }}
+        style={{ maxWidth: '500px', width: '100%' }}
         onSubmit={handleSubmit}
         name="contactForm"
         action="/success"

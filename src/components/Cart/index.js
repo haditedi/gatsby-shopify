@@ -32,11 +32,11 @@ const Cart = () => {
           flexWrap: 'wrap',
         }}
       >
-        <h2 style={align}>Subtotal</h2>
-        <p style={align}>£ {checkout.subtotalPrice}</p>
+        {/* <h2 style={align}>Subtotal</h2>
+        <p style={align}>£ {checkout.subtotalPrice}</p> */}
 
-        <h2 style={align}>Taxes</h2>
-        <p style={align}>£ {checkout.totalTax}</p>
+        {/* <h2 style={align}>Taxes</h2>
+        <p style={align}>£ {checkout.totalTax}</p> */}
 
         <h2 style={align}>Total</h2>
         <p style={align}>£ {checkout.totalPrice}</p>

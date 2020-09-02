@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
                 color: 'white',
               }}
             >
-              © {new Date().getFullYear()},{' '}
+              © {new Date().getFullYear()}{' '}
               <a
                 href="https://www.tedi.tech"
                 target="_blank"

@@ -16,10 +16,17 @@ const About = () => {
   `)
   return (
     <div>
-      <h1>About</h1>
+      <h1 data-sal="slide-up" data-sal-duration="1000" data-sal-easing="ease">
+        About
+      </h1>
       <section>
         <Img fluid={data.file.child.fluid} alt="company" />
-        <p style={{ padding: '20px' }}>
+        <p
+          data-sal="slide-up"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+          style={{ padding: '20px' }}
+        >
           We are energetic, stylish and passionate driven company. We are
           growing to meet the market demand with high quality product and
           unrivalled customer service.
