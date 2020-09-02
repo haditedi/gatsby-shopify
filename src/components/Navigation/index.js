@@ -27,20 +27,16 @@ const Navigation = () => {
           to="/"
           style={{
             display: 'flex',
-            alignItems: 'baseline',
+            alignItems: 'flex-end',
           }}
         >
-          <img
-            src={Logo}
-            alt="logo"
-            style={{ width: '70px', margin: '5px ' }}
-          />{' '}
+          <img src={Logo} alt="logo" style={{ width: '70px', margin: '5px' }} />{' '}
           <h1 style={{ color: 'white', margin: '0', paddingRight: '20px' }}>
             YouTanks
           </h1>
         </Link>
 
-        <Section>
+        <Section style={{ marginBottom: '20px' }}>
           <Link
             to="/about"
             activeClassName="active"
