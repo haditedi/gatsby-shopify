@@ -135,7 +135,7 @@ const ProductForm = ({ product }) => {
         id="quantity"
         name="quantity"
         style={{
-          margin: '12px 10px 30px',
+          margin: '12px 10px 30px 13px',
           padding: '3px',
           width: '80px',
           border: '1px solid black',
