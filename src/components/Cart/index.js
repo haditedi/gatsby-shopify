@@ -15,6 +15,7 @@ const Cart = () => {
   const handleCheckout = () => {
     window.open(checkout.webUrl)
     clearCheckOut()
+    window.location.reload()
   }
 
   const lineItems = checkout.lineItems.map(item => (
