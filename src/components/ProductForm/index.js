@@ -13,8 +13,7 @@ const ProductForm = ({ product }) => {
     priceRange: { minVariantPrice },
   } = product
   const [variant, setVariant] = useState({ ...initialVariant })
-  console.log(variants)
-  console.log(variant)
+
   const [quantity, setQuantity] = useState(1)
   const {
     addVariantToCart,
@@ -103,8 +102,6 @@ const ProductForm = ({ product }) => {
     minimumFractionDigits: 2,
     style: 'currency',
   }).format(variant.price)
-
-  console.log(options)
 
   return (
     <>
