@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   padding: 1.45rem 1.45rem 0.5rem;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -30,7 +30,7 @@ export const Section = styled.section`
 export const MenuLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
 
   @media (max-width: ${breakpoints.s}px) {

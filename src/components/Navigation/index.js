@@ -36,7 +36,7 @@ const Navigation = () => {
           </h1>
         </Link>
 
-        <Section style={{ marginBottom: '20px' }}>
+        <Section>
           <Link
             to="/about"
             activeClassName="active"
