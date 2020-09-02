@@ -13,6 +13,8 @@ const ProductForm = ({ product }) => {
     priceRange: { minVariantPrice },
   } = product
   const [variant, setVariant] = useState({ ...initialVariant })
+  console.log(variants)
+  console.log(variant)
   const [quantity, setQuantity] = useState(1)
   const {
     addVariantToCart,
@@ -102,6 +104,8 @@ const ProductForm = ({ product }) => {
     style: 'currency',
   }).format(variant.price)
 
+  console.log(options)
+
   return (
     <>
       <h3>{price}</h3>
@@ -120,7 +124,7 @@ const ProductForm = ({ product }) => {
               <option
                 value={value}
                 key={`${name}-${value}`}
-                disabled={checkDisabled(name, value)}
+                // disabled={checkDisabled(name, value)}
               >
                 {value}
               </option>
@@ -146,15 +150,15 @@ const ProductForm = ({ product }) => {
         value={quantity}
       />
       <br />
+      {!available && <p>Sorry, this product is out of Stock...</p>}
       <Button
         type="primary"
         shape="round"
-        // disabled={!available || adding}
+        disabled={!available || adding}
         onClick={handleAddToCart}
       >
         Add to Cart
       </Button>
-      {/* {!available && <p>Sorry, this Product is out of Stock...</p>} */}
     </>
   )
 }
