@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Form, Input, Button } from 'antd'
+import { Input, Button } from 'antd'
+import { Container } from '~/utils/styles'
 
 const Contact = () => {
-  const [state, setState] = useState({ name: '' })
-  console.log(state)
+  const [state, setState] = useState({ name: '', email: '', message: '' })
+  // console.log(state)
+
   const handleChange = e => {
     const { name, value } = e.target
     setState(prevValue => {
@@ -12,16 +14,16 @@ const Contact = () => {
         [name]: value,
       }
     })
-    console.log(e.target.name, e.target.value)
   }
   const handleSubmit = e => {
-    console.log(state)
+    // console.log(state)
   }
   return (
-    <div>
+    <Container>
       <h1>Contact Us</h1>
 
       <form
+        style={{ width: '500px' }}
         onSubmit={handleSubmit}
         name="contactForm"
         action="/success"
@@ -30,15 +32,36 @@ const Contact = () => {
       >
         <input type="hidden" name="form-name" value="contactForm"></input>
         <Input
+          style={{ marginBottom: '10px' }}
           placeholder="Name"
           onChange={handleChange}
           name="name"
           value={state.name}
           required
         />
-        <Button htmlType="submit">Submit</Button>
+        <Input
+          style={{ marginBottom: '10px' }}
+          type="email"
+          placeholder="Email"
+          onChange={handleChange}
+          name="email"
+          value={state.email}
+          required
+        />
+        <Input.TextArea
+          style={{ marginBottom: '10px' }}
+          rows={5}
+          placeholder="Message"
+          onChange={handleChange}
+          name="message"
+          value={state.message}
+          required
+        />
+        <Button type="primary" shape="round" htmlType="submit">
+          Submit
+        </Button>
       </form>
-    </div>
+    </Container>
   )
 }
 

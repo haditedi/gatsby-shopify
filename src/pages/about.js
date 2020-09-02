@@ -20,8 +20,9 @@ const About = () => {
       <section>
         <Img fluid={data.file.child.fluid} alt="company" />
         <p style={{ padding: '20px' }}>
-          We are energetic, stylish and passionate driven company. We start
-          small but we will grow to meet the market demand.
+          We are energetic, stylish and passionate driven company. We are
+          growing to meet the market demand with high quality product and
+          unrivalled customer service.
         </p>
       </section>
     </div>
